@@ -1,0 +1,46 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches
+*.log
+*.cache
+*.tmp
+*.bak
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.spec
+pkggroot/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Env
+.env
+.venv/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+
+# Qt / Translation
+*.qm
+*.ts~
+
+# PyInstaller
+*.manifest
+*.spec
+
+# OS-generated files
+.DS_Store
+Thumbs.db
