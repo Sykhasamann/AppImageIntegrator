@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=AppImage Integrator
+Exec=python3 /opt/appimage-integrator/launch_gui.py
+Icon=appimage-integrator
+Categories=Utility;
+Terminal=false

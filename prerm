@@ -1,0 +1,42 @@
+#!/bin/bash
+
+ICON_PATH="/usr/share/icons/hicolor/256x256/apps/appimage-integrator.png"
+DESKTOP_PATH="/usr/share/applications/appimage-integrator.desktop"
+OPEN_DESKTOP_PATH="/usr/share/applications/appimage-integrator-open.desktop"
+WRAPPER_SCRIPT="/opt/appimage-integrator/appimage-integrator-launch.sh"
+
+echo "🧹 [PRERM] Nettoyage en cours..."
+
+# Supprimer l'icône
+if [ -f "$ICON_PATH" ]; then
+    echo "🗑️ Suppression de l'icône : $ICON_PATH"
+    rm -f "$ICON_PATH"
+else
+    echo "ℹ️ Icône déjà absente."
+fi
+
+# Supprimer le .desktop principal
+if [ -f "$DESKTOP_PATH" ]; then
+    echo "🗑️ Suppression du fichier .desktop : $DESKTOP_PATH"
+    rm -f "$DESKTOP_PATH"
+else
+    echo "ℹ️ Fichier .desktop déjà absent."
+fi
+
+# Supprimer le .desktop "Ouvrir avec"
+if [ -f "$OPEN_DESKTOP_PATH" ]; then
+    echo "🗑️ Suppression du .desktop 'ouvrir avec' : $OPEN_DESKTOP_PATH"
+    rm -f "$OPEN_DESKTOP_PATH"
+fi
+
+# Supprimer le script wrapper
+if [ -f "$WRAPPER_SCRIPT" ]; then
+    echo "🗑️ Suppression du launcher : $WRAPPER_SCRIPT"
+    rm -f "$WRAPPER_SCRIPT"
+fi
+
+# Mettre à jour les caches
+gtk-update-icon-cache -f -t /usr/share/icons/hicolor >/dev/null 2>&1 || true
+update-desktop-database /usr/share/applications >/dev/null 2>&1 || true
+
+echo "✅ [PRERM] Nettoyage terminé."
