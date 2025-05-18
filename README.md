@@ -1,45 +1,45 @@
 
 # AppImage Integrator
 
-**AppImage Integrator** est une application graphique et en ligne de commande pour faciliter l'installation, la gestion et la suppression de fichiers `.AppImage` sous Linux.
+**AppImage Integrator** is a graphical, command-line application for easy installation, management and removal of `.AppImage` files under Linux.
 
 ![AppImage Integrator](https://img.shields.io/badge/status-stable-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 ![Languages](https://img.shields.io/badge/languages-fr--FR%20%7C%20en--US-yellow)
 
-## ✨ Fonctionnalités
+## ✨ Features
 
-- 📂 Intégration automatique d'un fichier `.AppImage`
-- 🔎 Détection en temps réel de nouveaux fichiers dans le dossier Téléchargements
-- 🧹 Désinstallation propre avec suppression des entrées `.desktop` et icônes
-- 🧾 Génération automatique de fichiers `.desktop`
-- 🖼️ Gestion des icônes de l'application
-- 🌍 Interface multilingue (Français 🇫🇷 / Anglais 🇬🇧)
-- ⚙️ Personnalisation du dossier source et de destination
-- 🧪 Mode CLI ou interface graphique (`PyQt5`)
+- 📂 Automatic integration of `.AppImage` files
+- 🔎 Real-time detection of new files in the Downloads folder
+- 🧹 Clean uninstall with removal of `.desktop` entries and icons
+- 🧾 Automatic generation of `.desktop` files
+- 🖼️ Application icon management
+- 🌍 Multilingual interface (French 🇫🇷 / English 🇬🇧)
+- ⚙️ Source and destination folder customization
+- 🧪 CLI mode or graphical user interface (`PyQt5`)
 
 ## 📦 Installation
 
-### Fedora / RHEL / dérivés
+### Fedora / RHEL / derivates
 
 ```bash
 sudo dnf install ./appimage-integrator-1.2.rpm
 ```
 
-### Debian / Ubuntu / dérivés
+### Debian / Ubuntu / derivates
 
 ```bash
 sudo apt install ./appimage-integrator_1.2.deb
 ```
 
-## 🖥️ Lancement
-Interface graphique :
+## 🖥️ Launch
+Graphical interface :
 ```bash
 appimage-integrator
 ```
-Ou bien via le menu des applications.
+Or via the applications menu.
 
-Ligne de commande :
+Command line :
 
 ```bash
 appimage-integrator /chemin/vers/fichier.AppImage
@@ -48,39 +48,39 @@ appimage-integrator --uninstall NomDuFichier.AppImage
 appimage-integrator --info NomDuFichier.AppImage
 ```
 
-## 🌐 Traduction
-L'application détecte automatiquement la langue système.
+## 🌐 Translation
+The application automatically detects the system language.
 
-Traductions disponibles :
+Available translations :
 
-    Français (par défaut)
-    Anglais
-Vous pouvez forcer la langue via :
+    French (default)
+    English
+You can force the language with :
 ```bash
 LANG=en_US.UTF-8 appimage-integrator
 ```
 
 ## ⚙️ Configuration
 
-Le fichier de configuration est stocké dans :
+The configuration file is stored in :
 ```bash
 ~/.config/appimage-integrator/config.json
 ```
-Il contient les chemins source et destination des AppImages. Vous pouvez également les modifier depuis l’interface graphique.
+It contains the source and destination paths for AppImages. You can also modify them from the graphical interface.
 
-## 🔧 Dépendances
+## 🔧 Dependencies
 
-🔧 Dépendances
+🔧 Dependencies
 
 - Python 3.7+
 - PyQt5
 - watchdog
 
-Installées automatiquement avec le paquet .deb ou .rpm.
+Automatically installed with the .deb or .rpm package.
 
 ## 📃 Licence
-Ce projet est sous licence MIT.
-Développé avec ❤️ par syks.
+This project is licensed by MIT.
+Developed with ❤️ by syks.
 
 
 
